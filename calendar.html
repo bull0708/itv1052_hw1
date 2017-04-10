@@ -141,7 +141,7 @@ function display(data) {
 				.range(d3.range(9));
   
     d3.selectAll("rect.day")
-        .attr("class", function(d) { return "day q" + color(data[d]) + "-9"; })
+        .attr("class", function(d) { return "day q" + (8 - color(data[d])) + "-9"; })
       .select("title")
         .text(function(d) { return formatDate(d) + ": " + data[d]; });
 		
